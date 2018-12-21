@@ -1,10 +1,10 @@
 <div class="row mt-5">
-  <div class="col-md-4 mb-3" *ngFor="let website of websites">
+  <div class="col-md-4 mb-3" *ngFor="let website of websites | async">
     <div class="card text-center">
       <div class="card-body">
-        <h5 class="card-title">{{website.name}}</h5>
-        <p class="card-text">Reviews: {{website.review}}</p>
-        <a href="#" class="btn btn-primary">Review</a>
+        <h5 class="card-title">{{website.websiteName}}</h5>
+        <p class="card-text"><a routerLink="/websites/{{website._id}}">Reviews: {{website.websiteReviews}}</a></p>
+        <a routerLink="/websites/{{website._id}}" class="btn btn-primary">Review</a>
       </div>
     </div>
   </div>

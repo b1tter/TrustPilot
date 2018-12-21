@@ -1,0 +1,12 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let review of reviews">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title card-header"><a routerLink="/websites/{{review._id}}"> {{review.websiteId}}</a></h5>
+        <p class="card-text">By: {{review.OwnerEmail}}</p>
+        <p class="card-text">Review: {{review.reviewComment}}</p>
+        <a routerLink="/websites/{{review._id}}" class="btn btn-primary">Write a review</a>
+      </div>
+    </div>
+  </div>
+</div>

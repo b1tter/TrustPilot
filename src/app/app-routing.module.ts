@@ -3,16 +3,26 @@ import {Routes, RouterModule} from '@angular/router';
 import {WebsitesComponent} from './websites/websites.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import {ReviewsComponent} from './reviews/reviews.component';
+import {ReviewsOnSiteComponent} from './reviews-on-site/reviews-on-site.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/websites',
+    redirectTo: '/reviews',
     pathMatch: 'full'
   },
   {
     path: 'websites',
     component: WebsitesComponent
+  },
+  {
+    path: 'reviews',
+    component: ReviewsComponent
+  },
+  {
+    path: 'websites/:id',
+    component: ReviewsOnSiteComponent
   },
   {
     path: 'login',
