@@ -5,7 +5,7 @@ const path = require('path');
 
 
 const api = require('./routes/api');
-const PORT = (process.env.PORT || 8080);
+const PORT = (process.env.PORT || 3000);
 
 const app = express();
 
@@ -26,6 +26,6 @@ app.get('/', (req, res) => {
   res.send('Hello from the server');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, function () {
   console.log('Server running on port: ' + PORT)
 });
