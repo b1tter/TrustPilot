@@ -3,11 +3,11 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-const app = express();
+
 const api = require('./routes/api');
-const PORT = app.listen(process.env.PORT || 8080);
+const PORT = (process.env.PORT || 8080);
 
-
+const app = express();
 
 app.use(cors());
 
@@ -26,6 +26,6 @@ app.get('/', (req, res) => {
   res.send('Hello from the server');
 });
 
-app.listen(PORT, function () {
+app.listen(PORT, () => {
   console.log('Server running on port: ' + PORT)
 });
