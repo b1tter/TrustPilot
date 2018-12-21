@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.static('../src'));
+app.use(express.static(path.join(__dirname, 'src')));
 
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(bodyparser.json());
