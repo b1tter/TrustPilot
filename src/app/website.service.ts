@@ -14,11 +14,11 @@ export class WebsiteService {
   }
 
   getWebsites(): Observable<Website[]> {
-    return this.http.get<Website[]>(this.url_prefix + '/api/websites/');
+    return this.http.get<Website[]>('api/websites/');
   }
 
   getWebsitesId(_id: string): Observable<Website> {
-    return this.http.get<Website>(this.url_prefix + `/api/websites/${_id}`);
+    return this.http.get<Website>(`/api/websites/${_id}`);
   }
 }
 

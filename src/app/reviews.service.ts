@@ -13,19 +13,19 @@ export class ReviewsService {
   constructor(private http: HttpClient) { }
 
   createReview(review: ReviewParams): Observable<Review> {
-    return this.http.post<Review>(`${this.url_prefix}/api/reviews`, review);
+    return this.http.post<Review>('api/reviews', review);
   }
 
   getReviewsByWebsiteId(id: string): Observable<Review[]> {
-    return this.http.get<Review[]>(`${this.url_prefix}/api/reviews?websiteId=${id}`);
+    return this.http.get<Review[]>(`api/reviews?websiteId=${id}`);
   }
 
   getReviews(): Observable<Review[]> {
-    return this.http.get<Review[]>(this.url_prefix + '/api/reviews/');
+    return this.http.get<Review[]>('api/reviews/');
   }
 
   getReviewById(_id: string): Observable<Review[]> {
-    return this.http.get<Review[]>(this.url_prefix + `/api/reviews/${_id}`);
+    return this.http.get<Review[]>(`api/reviews/${_id}`);
   }
 }
 
